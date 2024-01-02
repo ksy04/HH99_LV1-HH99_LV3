@@ -8,7 +8,6 @@ import {
 
 const Dropdown = ({
   selectedItem,
-  setSelectedItem,
   isActive,
   setIsActive,
   items,
