@@ -1,4 +1,7 @@
 import React from "react";
+import { FaAngleRight } from "react-icons/fa";
+import { MdOutlineEditNotifications } from "react-icons/md";
+
 import {
   StyledPrimary,
   StyledMedium,
@@ -18,6 +21,7 @@ function Button() {
         }}
       >
         Large Primary Button
+        <FaAngleRight />
       </StyledPrimary>
       <StyledMedium>Medium</StyledMedium>
       <StyledSmall>Small</StyledSmall>
@@ -29,6 +33,7 @@ function Button() {
         }}
       >
         Large Negative Button
+        <MdOutlineEditNotifications />
       </StyledNegative>
       <StyledMediumRed>Medium</StyledMediumRed>
       <StyledSmallRed>Small</StyledSmallRed>

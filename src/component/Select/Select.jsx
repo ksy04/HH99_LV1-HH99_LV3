@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Styleddiv } from "./style";
+import { Styleddiv2 } from "./style";
+import { Styleddiv3 } from "./style";
 import Dropdown from "./Dropdown";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 function Select() {
   const [selectedItem1, setSelectedItem1] = useState("리엑트");
@@ -19,27 +22,39 @@ function Select() {
     setIsActive2(false);
   };
 
+  const handleDropdownToggle1 = () => {
+    setIsActive1(!isActive1);
+    setIsActive2(false);
+  };
+
+  const handleDropdownToggle2 = () => {
+    setIsActive2(!isActive2);
+    setIsActive1(false);
+  };
+
   return (
     <>
       <h1>Select</h1>
-      <Styleddiv>
-        <Dropdown
-          selectedItem={selectedItem1}
-          setSelectedItem={setSelectedItem1}
-          isActive={isActive1}
-          setIsActive={setIsActive1}
-          items={["React", "자바", "스프링", "리엑트네이티브"]}
-          onItemClick={handleDropdownItemClick1}
-        />
-        <Dropdown
-          selectedItem={selectedItem2}
-          setSelectedItem={setSelectedItem2}
-          isActive={isActive2}
-          setIsActive={setIsActive2}
-          items={["리엑트", "자바"]}
-          onItemClick={handleDropdownItemClick2}
-        />
-      </Styleddiv>
+      <Styleddiv3>
+        <Styleddiv>
+          <Dropdown 
+            selectedItem={selectedItem1}
+            isActive={isActive1}
+            setIsActive={handleDropdownToggle1}
+            items={["React", "자바", "스프링", "리엑트네이티브"]}
+            onItemClick={handleDropdownItemClick1}
+          />
+        </Styleddiv>
+        <Styleddiv2>
+          <Dropdown
+            selectedItem={selectedItem2}
+            isActive={isActive2}
+            setIsActive={handleDropdownToggle2}
+            items={["React", "자바", "스프링", "리엑트네이티브"]}
+            onItemClick={handleDropdownItemClick2}
+          />
+        </Styleddiv2>
+      </Styleddiv3>
     </>
   );
 }
