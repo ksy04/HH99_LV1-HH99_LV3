@@ -5,7 +5,9 @@ import {
   StyledDropDownContent,
   StyledDropdownItem,
   StyledEntire,
+  StyledIcon
 } from "./style";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 const Dropdown = ({
   selectedItem,
@@ -19,8 +21,12 @@ const Dropdown = ({
       <StyledDropDown>
         <StyledDropDownBtn onClick={() => setIsActive(!isActive)}>
           {selectedItem}
+          <StyledIcon>
+            <AiOutlineCaretDown />
+          </StyledIcon>
         </StyledDropDownBtn>
-        {isActive && ( 
+
+        {isActive && (
           <StyledDropDownContent>
             {items.map((item, index) => (
               <StyledDropdownItem key={index} onClick={() => onItemClick(item)}>

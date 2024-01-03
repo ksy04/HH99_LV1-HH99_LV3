@@ -9,6 +9,7 @@ const StyledPrimary = styled.button`
   border: 3px solid rgb(85, 239, 196);
   background-color: rgb(255, 255, 255);
   font-weight: 600;
+  padding: 10px 20px;
 `;
 
 const StyledMedium = styled.button`

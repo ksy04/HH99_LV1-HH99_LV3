@@ -13,39 +13,44 @@ function Modal() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHorizontalModalOpen, setIsHorizontalModalOpen] = useState(false);
 
+  // 모달 열기
   const openModal = () => {
     setIsModalOpen(true);
   };
 
+  // 모달 닫기
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  // 수평 모달 열기
   const openHorizontalModal = () => {
     setIsHorizontalModalOpen(true);
   };
-
+// 수평 모달 닫기
   const closeHorizontalModal = () => {
     setIsHorizontalModalOpen(false);
   };
 
-  // 모달 클릭 시 닫힘
+  // 모달 외부 영역 클릭 시 닫힘
   const handleModalClick = () => {
-    console.log("container click");
+    
     closeModal();
   };
 
+  // 모달 닫기 누르면 닫힘
   const handleCloseButtonClick = () => {
     // 닫힘
     closeModal();
   };
 
-  // 닫힘 X
+  // 확인 버튼 눌렀을 때 빈 함수 호출
   const handleCheckButtonClick = (e) => {
     e.stopPropagation();
-    // 아무 동작이 실행되지 않도록 빈 함수 혹은 필요한 로직을 추가
+    
   };
 
+  // X 누르면 닫힘
   const handleCloseHorizontalButtonClick = () => {
     closeHorizontalModal();
   };

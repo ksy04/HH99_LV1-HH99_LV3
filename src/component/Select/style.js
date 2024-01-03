@@ -14,8 +14,10 @@ const StyledDropDownBtn = styled.div`
   border: 1px solid rgb(221, 221, 221);
   font-weight: bold;
   width: 280px;
-
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledDropDownContent = styled.div`
@@ -60,6 +62,12 @@ const StyledEntire = styled.div`
   margin-top: 50px;
 `;
 
+const StyledIcon = styled.div`
+  justify-content: space-between;
+  margin-left: 8px;
+  
+`;
+
 export {
   StyledDropDown,
   StyledDropDownBtn,
@@ -69,4 +77,5 @@ export {
   Styleddiv2,
   Styleddiv3,
   StyledEntire,
+  StyledIcon,
 };

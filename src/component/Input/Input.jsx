@@ -21,13 +21,14 @@ function Input() {
     setPrice(formattedPrice);
   };
 
+  // 이름 가격 빈 문자열 확인, trim 메서드 공백 제거, 그 후 비어있지 않은지 여부 확인
   const handleButtonClick = () => {
     if (name.trim() !== "" && price.trim() !== "") {
       const alertObject = {
         name: name,
         price: parseFloat(price.replace(/,/g, "")), // 콤마 제거 후 파싱
       };
-
+      // 데이터를 문자열로 표현하여 전송하거나 저장하기 위해서 JSON 문자열로 변환하여 경고 창 출력
       alert(JSON.stringify(alertObject));
     } else {
       alert("이름과 가격을 먼저 입력하세요.");
